@@ -1,0 +1,19 @@
+{
+  "name": "whatroom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hell0w/shiny-funicular.git"
+  },
+  "author": "Hell0w",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hell0w/shiny-funicular/issues"
+  },
+  "homepage": "https://github.com/Hell0w/shiny-funicular#readme"
+}
