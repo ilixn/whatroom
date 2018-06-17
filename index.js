@@ -26,12 +26,15 @@ app.get('/change', function(req, res, next) {
 app.listen(1234, () => console.log('Whatroom app listening on port 1234!'));
 
 function setRoomOccuped(id) {
+  var salles_list_stringified;
 	fs.readFile('salles.json', function(err, data) {
 		if (err) throw err;
 		salles_list = JSON.parse(data);
 		salles_list.salles[id].state = false;
 		console.log(JSON.stringify(salles_list));
-		var salles_list_stringified = JSON.stringify(salles_list);
+		salles_list_stringified = JSON.stringify(salles_list);
 		//fs.writeFile('salles.json', salles_list_stringified, (err) => { if (err) throw err } );
+      //PROBLEM: WRITING IN AN OPEN FILE, CORRECTION : WRITE AFTER (TO TRY)
 	});
+  //TRY THIS : fs.writeFile('salles.json', salles_list_stringified, (err) => { if (err) throw err } );
 }
