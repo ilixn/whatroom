@@ -4,37 +4,53 @@
 	<title>Quelles salles sont libres ??</title>
 </head>
 <body>
-<button onclick="getRooms()">getRooms()</button>
-<button onclick="getEmptyRooms()">getEmptyRooms()</button>
-<div id="data"></div>
-<script type="text/javascript">
-	var salles_string;
-	var salles_list;
-	var salles_nb = 40;
+	<button onclick="getRooms()">getRooms()</button>
+	<button onclick="getEmptyRooms()">getEmptyRooms()</button>
+	<input type="text" id="room">
+	<button onclick="submitRoom()">Cette salle est occupée ! :)</button>
+	<div id="data"></div>
 
-	function getRooms(){
-	  var xhttp = new XMLHttpRequest();
-	  xhttp.onreadystatechange = function() {
-	    if (this.readyState == 4 && this.status == 200) {
-	      salles_string = this.responseText;
-	    }
-	  };
+	<script type="text/javascript">
+		var salles_string;
+		var salles_list;
+		var salles_nb = 40;
 
-	  xhttp.open("GET", "salles.json", true);
-	  xhttp.send();
+		function getRooms(){
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					salles_string = this.responseText;
+				}
+			};
 
-	  console.log(salles_string);
-	}
+			xhttp.open("GET", "salles.json", true);
+			xhttp.send();
 
-	function getEmptyRooms() {
-		salles_list = JSON.parse(salles_string);
-		for (var i = 0; i < salles_nb; i++) {
-			if(salles_list.salles[i].state) {
-				document.getElementById("data").innerHTML += "<br/>La salle " + salles_list.salles[i].name + " est libre";
+			console.log(salles_string);
+		}
+
+		function getEmptyRooms() {
+			salles_list = JSON.parse(salles_string);
+			document.getElementById("data").innerHTML = "";
+			for (var i = 0; i < salles_nb; i++) {
+				if(salles_list.salles[i].state) {
+					document.getElementById("data").innerHTML += "<br/>La salle " + salles_list.salles[i].name + " est libre";
+				}
 			}
 		}
-	}
 
-</script>
+		function submitRoom() {
+			var room = parseInt(document.getElementById("room").value);
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				}
+			};
+
+			xhttp.open("GET", "change?room=" + room, true);
+			xhttp.send();
+		}
+
+	</script>
 </body>
 </html>
