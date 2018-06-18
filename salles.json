@@ -13,12 +13,12 @@
     {
       "id": 2,
       "name": "VH2",
-      "state": true
+      "state": false
     },
     {
       "id": 3,
       "name": "VH3",
-      "state": false
+      "state": true
     },
     {
       "id": 4,
@@ -43,161 +43,11 @@
     {
       "id": 8,
       "name": "VH8",
-      "state": true
+      "state": false
     },
     {
       "id": 9,
       "name": "VH9",
-      "state": false
-    },
-    {
-      "id": 10,
-      "name": "VH10",
-      "state": true
-    },
-    {
-      "id": 11,
-      "name": "VH11",
-      "state": true
-    },
-    {
-      "id": 12,
-      "name": "VH12",
-      "state": true
-    },
-    {
-      "id": 13,
-      "name": "VH13",
-      "state": true
-    },
-    {
-      "id": 14,
-      "name": "VH14",
-      "state": false
-    },
-    {
-      "id": 15,
-      "name": "VH15",
-      "state": true
-    },
-    {
-      "id": 16,
-      "name": "VH16",
-      "state": true
-    },
-    {
-      "id": 17,
-      "name": "VH17",
-      "state": true
-    },
-    {
-      "id": 18,
-      "name": "VH18",
-      "state": false
-    },
-    {
-      "id": 19,
-      "name": "VH19",
-      "state": true
-    },
-    {
-      "id": 20,
-      "name": "VH20",
-      "state": true
-    },
-    {
-      "id": 21,
-      "name": "VH21",
-      "state": true
-    },
-    {
-      "id": 22,
-      "name": "VH22",
-      "state": true
-    },
-    {
-      "id": 23,
-      "name": "VH23",
-      "state": true
-    },
-    {
-      "id": 24,
-      "name": "VH24",
-      "state": true
-    },
-    {
-      "id": 25,
-      "name": "VH25",
-      "state": false
-    },
-    {
-      "id": 26,
-      "name": "VH26",
-      "state": true
-    },
-    {
-      "id": 27,
-      "name": "VH27",
-      "state": true
-    },
-    {
-      "id": 28,
-      "name": "VH28",
-      "state": true
-    },
-    {
-      "id": 29,
-      "name": "VH29",
-      "state": true
-    },
-    {
-      "id": 30,
-      "name": "VH30",
-      "state": true
-    },
-    {
-      "id": 31,
-      "name": "VH31",
-      "state": true
-    },
-    {
-      "id": 32,
-      "name": "VH32",
-      "state": true
-    },
-    {
-      "id": 33,
-      "name": "VH33",
-      "state": true
-    },
-    {
-      "id": 34,
-      "name": "VH34",
-      "state": true
-    },
-    {
-      "id": 35,
-      "name": "VH35",
-      "state": true
-    },
-    {
-      "id": 36,
-      "name": "VH36",
-      "state": true
-    },
-    {
-      "id": 37,
-      "name": "VH37",
-      "state": true
-    },
-    {
-      "id": 38,
-      "name": "VH38",
-      "state": false
-    },
-    {
-      "id": 39,
-      "name": "VH39",
       "state": true
     }
   ]

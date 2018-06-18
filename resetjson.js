@@ -1,13 +1,15 @@
 const fs = require('fs');
-var salles_list = { "salles" : [] };
+var salles_list;
 
 fs.readFile('salles.json', function(err, data) {
 	if (err) throw err;
-	printJSON();
+	resetJSON();
 });
 
-function printJSON() {
-	for (var i = 0; i < 40; i++) {
+function resetJSON() {
+	salles_list = { "salles" : [] };
+
+	for (var i = 0; i < 10; i++) {
 		salles_list.salles[i] = {"id" : i, "name" : "VH" + i, "state" : true};
 	}
 
