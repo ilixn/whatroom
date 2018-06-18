@@ -7,7 +7,6 @@ var
   port = 1234;
 
 
-
 //Default homepage
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
@@ -20,19 +19,21 @@ app.get('/*' , function(req, res, next) {
 });
 
 
-
 //Socket.io setup
 var server = http.Server(app);
 
 var sio = io.listen(server);
 server.listen(port);
 
-sio.sockets.on('connection', function(client) {
-  client.emit('onconnected', { test: "value" });
+sio.sockets.on('connection', function(socket) {
+
+  socket.emit('onconnected', { test: "value" });
   console.log('\t socket.io:: client connected');
 
+  socket.emit('roomlist', { salles: 10 });
+
   //Disconnection
-  client.on('disconnect', function () {
+  socket.on('disconnect', function () {
       console.log('\t socket.io:: client disconnected');
   });
-})
+});
