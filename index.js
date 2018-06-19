@@ -27,13 +27,27 @@ server.listen(port);
 
 sio.sockets.on('connection', function(socket) {
 
-  socket.emit('onconnected', { test: "value" });
+  socket.emit('onconnected', { test: "OK!" });
   console.log('\t socket.io:: client connected');
 
-  socket.emit('roomlist', { salles: 10 });
+  socket.on('getFreeRooms', function() {
+	var rooms = getFreeRooms();
+	socket.emit('freeRooms', rooms);
+  });
+  socket.on('setRoomFull', function(room) {
+	  setRoomFull(room);
+  });
 
   //Disconnection
   socket.on('disconnect', function () {
       console.log('\t socket.io:: client disconnected');
   });
 });
+
+
+//Functions
+function getFreeRooms() {
+	return { rooms: "OK" };
+}
+function setRoomFull(room) {
+}
